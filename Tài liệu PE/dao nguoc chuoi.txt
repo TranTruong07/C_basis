@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+
+void str_reverse(char str[]) {
+  int lo = 0;
+  int length;
+  for (length = 0; str[length] != '\0' ; length++) {} 
+  while ( lo < length ) {
+    --length;
+    char tmp = str[lo];
+    str[lo] = str[length];
+    str[length] = tmp;
+    ++lo;
+  }
+}
+
+int main() {
+    char str[100];
+    
+    
+  
+    scanf("%s", str);
+    
+   
+    str_reverse(str);
+
+   
+    printf("%s", str);
+    return 0;
+}
